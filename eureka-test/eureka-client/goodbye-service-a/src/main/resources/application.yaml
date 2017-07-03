@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: goodbye-service
+
+server:
+  port: 8101
+
+eureka:
+  instance:
+    metadataMap:
+      zone: zoneA
+    hostname: localhost
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:8003/eureka

@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: eureka-server
+
+server:
+  port: 8003
+
+eureka:
+  instance:
+    hostname: localhost
+    metadataMap:
+      zone: zoneA
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8004/eureka
+  server:
+    enable-self-preservation: false
+    evictionIntervalTimerInMs: 5000

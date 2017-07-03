@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: eureka-server
+
+server:
+  port: 8004
+
+eureka:
+  instance:
+    hostname: localhost
+    metadataMap:
+      zone: zoneB
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8003/eureka
+  server:
+    enable-self-preservation: false
